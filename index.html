@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita ser meu padrinho?</title>
+    <style>
+        body {
+            font-family: cursive, sans-serif;
+            text-align: center;
+            background-color: #e2f1e3;
+        }
+        h1 {
+            font-family: serif;
+            color: #000000;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            font-family: cursive, sans-serif;
+            border-radius: 10px;
+            background-color: #90EE90;
+            border: none;
+        }
+        .button.no {
+            background-color: #FF6347;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aceita ser nosso padrinho?</h1>
+    <button class="button" id="sim" onclick="agradecimento()">Sim</button>
+    <button class="button no" id="nao" onmouseover="fugir()">Não</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        function agradecimento() {
+            document.getElementById("mensagem").innerText = "Obrigado por ser nosso padrinho!";
+        }
+
+        function fugir() {
+            var naoButton = document.getElementById("nao");
+            naoButton.style.position = "absolute";
+            naoButton.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+            naoButton.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+        }
+    </script>
+</body>
+</html>
